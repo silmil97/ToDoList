@@ -1,0 +1,17 @@
+form {
+    display: flex;
+}
+
+input {
+    width: 80%;
+    height: 30px;
+    background-color: transparent;
+    border: 0;
+}
+
+.AddTask {
+    height: 30px;
+    background-color: transparent;
+    border: 0;
+    width: 20%;
+}

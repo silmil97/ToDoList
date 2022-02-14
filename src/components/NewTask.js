@@ -1,47 +1,51 @@
 import { useState } from "react";
+import { TaskForm } from './TaskForm';
+import { TaskList } from "./TaskList";
+import './NewTask.css';
 
-const Tasks = []
-const counter = 0
+
 export function NewTask() {
-    const [input, setInput] = useState('')
-    
+    const [input, setInput] = useState('');
+    const [key, setKey] = useState('56568');
+    const [tasks, setTasks] = useState([{ key: 8908, task: 'whatever' }])
+
     const handleChange = (e) => {
         setInput(e.target.value)
     }
 
     function createTask(task) {
-        console.log(task)
-        Tasks.push(<p key={counter}>{counter}{task}</p>)
-        counter=+1
+        setKey(Math.floor(Math.random() * 100000));
+        tasks.push(
+            {
+                key: key,
+                task: task
+            }
+        );
     }
-    
-    function handleSubmit(e) {
+
+    function handleDelete(key) {
+        setTasks(tasks.filter((item) => item.key !== key))
+    }
+
+
+    const handleSubmit = (e) => {
         e.preventDefault();
-        createTask(input)
-        console.log(Tasks)
-        
+        if (input) {
+            createTask(input);
+            setInput('');
+        }
     }
+
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                <p>{input} kas</p>
-                <input
-                    type="text"
-                    value={input}
-                    placeholder="Add Task"
-                    onChange={handleChange}
-                    name="text"
-                />
-                <button>
-                    Add Task
-                </button>
-
-            </form>
-            <div>
-                {Tasks}
-            </div>
-            <p>hi</p>
+            <TaskForm
+                input={input}
+                onChange={handleChange}
+                onSubmit={handleSubmit}
+            />
+            <TaskList tasks={tasks} delete={handleDelete} />
         </>
     )
 }
+
