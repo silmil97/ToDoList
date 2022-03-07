@@ -1,9 +1,10 @@
 .Todo-App {
-  background-color: aliceblue;
+  background-color: #222831;
   border: 3px;
-  border-color: black;
+  border-color: #21325E;
   border-style: solid;
- 
+  color: #F0F0F0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 h1 {

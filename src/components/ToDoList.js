@@ -4,7 +4,7 @@ import { TaskList } from "./TaskList";
 import './NewTask.css';
 
 
-export function NewTask() {
+export function ToDoList() {
     const [input, setInput] = useState('');
     const [key, setKey] = useState('56568');
     const [tasks, setTasks] = useState([{ key: 8908, task: 'whatever' }])

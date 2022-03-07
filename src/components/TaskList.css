@@ -1,5 +1,6 @@
 .tasks {
-    background-color: yellow;
+    background-color: #393E46;
+    opacity: 100%;
 
 }
 
@@ -7,12 +8,10 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    border-color: black;
-    background-color: antiquewhite;
 }
 
 .task button {
     width: 10%;
     border: 0;
-    background-color: transparent ;
+    background-color:  #00ADB5;
 }

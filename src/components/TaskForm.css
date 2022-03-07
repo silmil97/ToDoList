@@ -5,13 +5,15 @@ form {
 input {
     width: 80%;
     height: 30px;
-    background-color: transparent;
     border: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #EEEEEE;
 }
 
 .AddTask {
-    height: 30px;
-    background-color: transparent;
+    height: 32px;
+    background-color:#eeeeee9a;
     border: 0;
     width: 20%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
